@@ -4,6 +4,10 @@
    padding: 0;
 }
 
+body {
+   display: block;
+   margin: 0 auto;
+}
 .container {
    width: 1140px;
    margin: 0 auto;
@@ -181,7 +185,7 @@ h2.title {
 
 .optimization {
    min-height: 550px;
-   padding: 102px 0 107px 0;
+   padding: 102px 0 0 0;
 }
 
 .optimization .optimization_header {
@@ -334,8 +338,4 @@ h2.title {
    font-style: normal;
    font-weight: 300;
    line-height: 21px; /* 140% */
-}
-
-.footer .footer_links {
-
 }
