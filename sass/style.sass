@@ -1,5 +1,10 @@
 $blue: #1CA8C3
 $orange: #FF5656
+
+@mixin btn_hover
+   &:hover
+      background-image: none
+      background-color: $orange
 *
    font-family: 'Roboto', sans-serif
 
@@ -72,6 +77,7 @@ nav
    font-size: 14px
    font-weight: 400
    text-transform: uppercase
+   @include btn_hover
 
 .promo
   min-height: 800px
@@ -119,6 +125,7 @@ nav
    font-size: 14px
    font-weight: 400
    text-transform: uppercase
+   @include btn_hover
 
 .advantages
    min-height: 850px
@@ -160,6 +167,7 @@ nav
    display: flex
    justify-content: center
    align-items: center
+   flex-shrink: 0
    width: 116px
    height: 116px
    border-radius: 100%
@@ -269,6 +277,26 @@ nav
          left: 50%
          transform: translateX(-50%)
          cursor: pointer
+         &::before
+            content: ''
+            display: block
+            width: 14px
+            height: 2px
+            background-color: $blue
+            transition: 0.3s all
+         &::after
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            content: ''
+            display: block
+            width: 2px
+            height: 14px
+            background-color: $blue
+            transition: 0.3s all
+         &:hover
+            &::before, &::after
+               background-color: $orange
 
 .uberX
    min-height: 900px
@@ -296,3 +324,78 @@ nav
          font-size: 17px
          font-weight: 300
          padding-top: 210px
+
+.require
+   padding: 68px 0 84px
+   &_block
+      margin: 33px 0
+      &_nmb
+         margin-bottom: 0px
+   &_title
+      color: #1CA8C3
+      font-size: 22px
+      font-weight: 400
+   &_list
+      list-style-type: none
+      padding-left: 50px
+      margin-top: 22px
+      li
+         position: relative
+         font-size: 17px
+         font-weight: 300
+         margin-bottom:10px
+         &::before
+            content: ''
+            display: block
+            position: absolute
+            left: -32px
+            top: 3px
+            width: 21px
+            height: 20px
+            background: url('../icons/check.png') center (center/cover) no-repeat
+   &_descr
+      margin-top: 25px
+      font-size: 17px
+      font-weight: 300
+      line-height: 24px
+      color: #1ca8c3
+   .warning
+      .require_title
+         color: $orange
+      .require_list
+         li
+            &::before
+               background: url('../icons/check_orange.png') center (center/cover) no-repeat
+
+.world
+   min-height: 720px
+   background-color: #080816
+   &_bg
+      max-width: 1440px
+      min-height: 720px
+      margin: 0 auto
+      padding-top: 48px
+      background: url('../img/world_bg.jpg') center (center/cover) no-repeat
+   &_btn
+      display: block
+      width: 220px
+      height: 68px
+      margin: 456px auto
+      color: #1FBAD6
+      text-align: center
+      font-size: 15px
+      font-weight: 400
+      text-transform: uppercase
+      background-color: black
+      border: none
+      border-radius: 10px
+      transition: 0.3s all
+      &:hover
+         transition: 0.3s all
+         background-color: orange
+   .label
+      background-color: white
+      color: black
+   .title, .subtitle
+      color: white
+
