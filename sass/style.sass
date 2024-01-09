@@ -28,6 +28,9 @@ nav
 .menu_item
    border-right: 2px dotted black
    padding-right: 28px
+   &_last
+      border-right: none
+      padding-right: 0
 
 .subheader
    position: absolute
@@ -80,9 +83,9 @@ nav
    @include btn_hover
 
 .promo
-  min-height: 800px
-  background: url(../img/uber_bg.jpg) center (center / cover) no-repeat
-  padding: 150px 0 135px 0
+   min-height: 800px
+   background: url(../img/uber_bg.jpg) center (center / cover) no-repeat
+   padding: 150px 0 135px 0
 
 .promo_header
    color: #FFF
@@ -343,7 +346,7 @@ nav
          position: relative
          font-size: 17px
          font-weight: 300
-         margin-bottom:10px
+         margin-bottom: 10px
          &::before
             content: ''
             display: block
@@ -399,3 +402,62 @@ nav
    .title, .subtitle
       color: white
 
+.footer
+   display: flex
+   justify-content: space-between
+   height: 156px
+   padding: 12px 22px 30px 22px
+   &_social
+      width: 33%
+      display: flex
+      align-items: center
+      &_item
+         display: flex
+         justify-content: center
+         align-items: center
+         width: 35px
+         height: 35px
+         background-color: #070716
+         border-radius: 100%
+         cursor: pointer
+         margin-right: 6px
+   &_title
+   &_title::before
+      display: block
+      content: ''
+      width: 300px
+      height: 7px
+      background-color: $blue
+      margin: 0 auto
+      margin-bottom: 30px
+   &_title a
+      margin-right: 30px
+      text-decoration: none
+      color: #070716
+      font-size: 15px
+      font-weight: 300
+      text-transform: uppercase
+   &_title a:last-child
+      margin-right: 0
+   &_menu
+      width: 33%
+      text-align: center
+   &_download
+      width: 33%
+   &_subtitle_item
+      text-decoration: none
+      color: #999
+      font-size: 11px
+      font-weight: 300
+      text-transform: uppercase
+      margin-right: 20px
+   &_subtitle a:last-child
+      margin-right: 0
+   &_language
+      margin-right: 20px
+      text-decoration: none
+      color: #1FBAD6
+      text-align: center
+      font-size: 11px
+      font-weight: 400
+      text-transform: uppercase
